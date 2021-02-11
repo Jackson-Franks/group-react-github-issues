@@ -3,11 +3,11 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import Issues from './issues'
+import Issues from './Issues'
 
 function App() {
 
-  const[issue, setIssues] = useState([])
+  const[issues, setIssues] = useState([])
 
   useEffect(() => {
     fetch('https://api.github.com/repos/facebook/react/issues?page=1&per_page=100')
@@ -18,9 +18,12 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Issues issues={issues} />
-    </div>
+    <Router>
+      <div>
+        <h1>Home Page</h1>
+        <Route path="/issues" render={() => <Issues issues={issues} /> } />
+      </div>
+    </Router>
   )
 }
 
