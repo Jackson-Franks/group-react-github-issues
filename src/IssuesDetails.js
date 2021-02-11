@@ -1,4 +1,4 @@
-function IssuesDetails () {
+function IssuesDetails (props) {
     return (
         <div>
             <div>
