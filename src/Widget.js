@@ -6,8 +6,9 @@ function Widget (props) {
             <div className="issueInfo">
                 <h2>{issue[0].title}</h2>
                 <p className="issueNum">#{issue[0].id}</p>
-                <p>{issue[0].state}</p>
+                <p className="issueState">State: {issue[0].state}</p><p>{`${issue[0].user.login} opened this issue on ${issue[0].created_at}`} </p>
             </div>
+            <hr />
             <div className="issueCont">
                 <p>{issue[0].body}</p>
             </div>
