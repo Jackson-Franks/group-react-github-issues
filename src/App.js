@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import Issues from './Issues'
-import IssuesDetails from './IssuesDetails'
 
 import Home from './Home'
+import Issues from './Issues'
+import Widget from './Widget'
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <div>
         <Route exact path='/' component={Home} />
         <Route path="/issues" render={() => <Issues issues={issues} /> } />
-        <Route path='issues/:id' render={(props) => <IssuesDetails {...props} issues={issues} /> } />
+        <Route path='/Widget/:id' render={(props) => <Widget {...props} issues={issues} /> } />
       </div>
     </Router>
   )
