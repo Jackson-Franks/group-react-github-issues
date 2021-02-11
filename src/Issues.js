@@ -8,7 +8,7 @@ function Issues(props) {
                 <ul>
 
                     {props.issues.map((issue, i) => {
-                        return <li className="list"><Link to ={`/issues/${i}`}>{issue.title}</Link></li>
+                        return <li className="list"><Link to ={`/Widget/${issue.id}`}>{issue.title}</Link></li>
 
                     })}
                 </ul>
