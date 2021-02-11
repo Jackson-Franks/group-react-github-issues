@@ -18,9 +18,12 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Issues issues={issues} />
-    </div>
+    <Router>
+      <div>
+        <h1>Home Page</h1>
+        <Route path="/issues" render={() => <Issues issues={issues} /> } />
+      </div>
+    </Router>
   )
 }
 
