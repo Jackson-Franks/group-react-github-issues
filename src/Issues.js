@@ -5,8 +5,8 @@ function Issues(props) {
             <div>
                 <h1>100 Open Issues</h1>
                 <ul>
-                    {props.issues.titles.map((issue, i) => {
-                        return <li><Link to ={`/issues/${i}`}>{issue}</Link></li>
+                    {props.issues.map((issue, i) => {
+                        return <li><Link to ={`/issues/${i}`}>{issue.title}</Link></li>
                     })}
                 </ul>
             </div>
