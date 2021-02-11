@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import Issues from './Issues'
+import IssuesDetails from './IssuesDetails'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <div>
         <h1>Home Page</h1>
         <Route path="/issues" render={() => <Issues issues={issues} /> } />
+        <Route path='issues/:id' render={(props) => <IssuesDetails {...props} issues={issues} /> } />
       </div>
     </Router>
   )
